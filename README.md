@@ -3,10 +3,10 @@
 This is a Fullstack Java ReactJS Application built on JHispter Stack
 with JUnit and JEST Unit Testing and Swagger API Documentation.
 
-# Prerequisites
+## Prerequisites
 PC
 
-Tested with :
+### Tested with :
 
 JDK 11
 
@@ -14,7 +14,7 @@ Maven 3.6.3
 
 Windows 10 X64
 
-Setup
+### Setup
 
 Install Java JDK 11
 
