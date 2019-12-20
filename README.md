@@ -5,14 +5,21 @@ with JUnit and JEST Unit Testing and Swagger API Documentation.
 
 # Prerequisites
 PC
+
 Tested with :
+
 JDK 11
+
 Maven 3.6.3
+
 Windows 10 X64
 
 Setup
+
 Install Java JDK 11
+
 Setup JavaHome Path
+
 Setup Apache Maven 3.6.3
 
 ## Development
