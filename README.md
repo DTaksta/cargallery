@@ -112,7 +112,12 @@ this code can be found https://github.com/DTaksta/cargallery/blob/master/src/mai
 
 ![Before Aston Delete](https://github.com/DTaksta/cargallery/blob/master/webpack/KiaRioEditReflecting.JPG)
 
-and after the delete, we see it is no longer there
-![]
+and after click delete we get a warning
+
+![Before Delete Warning](https://github.com/DTaksta/cargallery/blob/master/webpack/deleteWarningAstonMartin.JPG)
+
+and we click yes, and see that Aston Martin is no longer there
+
+![Aston Martin Delete Success](https://github.com/DTaksta/cargallery/blob/master/webpack/AstonMartinDeleteSuccess.JPG)
 
 
