@@ -54,7 +54,7 @@
             "otherEntityField": "login"
         }
     ],
-    "changelogDate": "20191220002209",
+    "changelogDate": "20191221212142",
     "entityTableName": "car",
     "dto": "no",
     "pagination": "pagination",

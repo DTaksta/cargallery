@@ -28,25 +28,10 @@ export class CarDetail extends React.Component<ICarDetailProps> {
             // Initialized with 'USD' because the base currency is 'USD'
             // and it is not included in the response
             const currencyAr = []
-                                /* eslint-disable no-console */
-                                console.log('props');
-                                console.log(this.props);
-                                console.log(response.data.rates);
-                                console.log(Object.keys(response.data.rates).length);
-                                /* eslint-enable no-console */
             Object.keys(response.data.rates).forEach(key=>{
-                /* eslint-disable no-console */
-                console.log("counting");
-                /* eslint-enable no-console */
                 currencyAr.push(key)
-                /* eslint-disable no-console */
-                console.log(key);
-                /* eslint-enable no-console */
             });
             this.setState({ currencies: currencyAr.sort() })
-            /* eslint-disable no-console */
-            console.log(this.state.currencies)
-            /* eslint-enable no-console */
         })
         .catch(err => {
             /* eslint-disable no-console */
@@ -136,15 +121,6 @@ export class CarDetail extends React.Component<ICarDetailProps> {
                         }
                     />
                     <label>Select another currency to view price in</label>
-                    {/* <select
-                        name="from"
-                        onChange={(event) => this.selectHandler(event)}
-                        value={this.state.fromCurrency}
-                    >
-                        {this.state.currencies.map(cur => (
-                            <option key={cur}>{cur}</option>
-                        ))}
-                    </select> */}
                     <select onClick={this.convertHandler}
                         name="to"
                         onChange={(event) => this.selectHandler(event)}
@@ -154,7 +130,6 @@ export class CarDetail extends React.Component<ICarDetailProps> {
                             <option key={cur}>{cur}</option>
                         ))}
                     </select>
-                    {/* <button onClick={this.convertHandler}>Convert</button> */}
                 </div>
                 {this.state.result && 
                     <h3>{this.state.result} (price in selected currency)</h3>
