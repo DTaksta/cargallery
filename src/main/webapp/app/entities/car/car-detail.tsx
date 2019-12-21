@@ -109,7 +109,7 @@ export class CarDetail extends React.Component<ICarDetailProps> {
             <dd>{carEntity.make}</dd>
             <dt>
               <span id="mileage">
-                <Translate contentKey="carsApp.car.mileage">Mileage</Translate>
+                <Translate contentKey="carsApp.car.mileage">Mileage(mi)</Translate>
               </span>
             </dt>
             <dd>{carEntity.mileage}</dd>

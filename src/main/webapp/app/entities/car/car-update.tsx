@@ -131,7 +131,7 @@ export class CarUpdate extends React.Component<ICarUpdateProps, ICarUpdateState>
                 </AvGroup>
                 <AvGroup>
                   <Label id="mileageLabel" for="car-mileage">
-                    <Translate contentKey="carsApp.car.mileage">Mileage</Translate>
+                    <Translate contentKey="carsApp.car.mileage">Mileage(mi)</Translate>
                   </Label>
                   <AvField
                     id="car-mileage"
@@ -161,7 +161,7 @@ export class CarUpdate extends React.Component<ICarUpdateProps, ICarUpdateState>
                 </AvGroup>
                 <AvGroup>
                   <Label id="priceLabel" for="car-price">
-                    <Translate contentKey="carsApp.car.price">Price</Translate>
+                    <Translate contentKey="carsApp.car.price">Price</Translate>(USD)
                   </Label>
                   <AvField
                     id="car-price"

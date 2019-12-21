@@ -82,13 +82,13 @@ export class Car extends React.Component<ICarProps, ICarState> {
                     <Translate contentKey="carsApp.car.make">Make</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
                   <th className="hand" onClick={this.sort('mileage')}>
-                    <Translate contentKey="carsApp.car.mileage">Mileage</Translate> <FontAwesomeIcon icon="sort" />
+                    <Translate contentKey="carsApp.car.mileage">Mileage</Translate> <FontAwesomeIcon icon="sort" />(mi)
                   </th>
                   <th className="hand" onClick={this.sort('year')}>
                     <Translate contentKey="carsApp.car.year">Year</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
                   <th className="hand" onClick={this.sort('price')}>
-                    <Translate contentKey="carsApp.car.price">Price</Translate> <FontAwesomeIcon icon="sort" />
+                    <Translate contentKey="carsApp.car.price">Price</Translate> <FontAwesomeIcon icon="sort" />(USD)
                   </th>
                   <th className="hand" onClick={this.sort('photo')}>
                     <Translate contentKey="carsApp.car.photo">Photo</Translate> <FontAwesomeIcon icon="sort" />
