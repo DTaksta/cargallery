@@ -31,9 +31,6 @@
             <column name="price" type="${floatType}">
                 <constraints nullable="false" />
             </column>
-            <column name="currency" type="varchar(255)">
-                <constraints nullable="false" />
-            </column>
             <column name="photo" type="longblob">
                 <constraints nullable="false" />
             </column>
@@ -71,7 +68,6 @@
             <column name="mileage" type="numeric"/>
             <column name="year" type="numeric"/>
             <column name="price" type="numeric"/>
-            <column name="currency" type="string"/>
             <column name="photo" type="blob"/>
             <column name="photo_content_type" type="string"/>
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here, do not remove-->

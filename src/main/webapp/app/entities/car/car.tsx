@@ -90,9 +90,6 @@ export class Car extends React.Component<ICarProps, ICarState> {
                   <th className="hand" onClick={this.sort('price')}>
                     <Translate contentKey="carsApp.car.price">Price</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
-                  <th className="hand" onClick={this.sort('currency')}>
-                    <Translate contentKey="carsApp.car.currency">Currency</Translate> <FontAwesomeIcon icon="sort" />
-                  </th>
                   <th className="hand" onClick={this.sort('photo')}>
                     <Translate contentKey="carsApp.car.photo">Photo</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
@@ -115,7 +112,6 @@ export class Car extends React.Component<ICarProps, ICarState> {
                     <td>{car.mileage}</td>
                     <td>{car.year}</td>
                     <td>{car.price}</td>
-                    <td>{car.currency}</td>
                     <td>
                       {car.photo ? (
                         <div>

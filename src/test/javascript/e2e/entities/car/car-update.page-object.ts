@@ -9,7 +9,6 @@ export default class CarUpdatePage {
   mileageInput: ElementFinder = element(by.css('input#car-mileage'));
   yearInput: ElementFinder = element(by.css('input#car-year'));
   priceInput: ElementFinder = element(by.css('input#car-price'));
-  currencyInput: ElementFinder = element(by.css('input#car-currency'));
   photoInput: ElementFinder = element(by.css('input#file_photo'));
   userSelect: ElementFinder = element(by.css('select#car-user'));
 
@@ -55,14 +54,6 @@ export default class CarUpdatePage {
 
   async getPriceInput() {
     return this.priceInput.getAttribute('value');
-  }
-
-  async setCurrencyInput(currency) {
-    await this.currencyInput.sendKeys(currency);
-  }
-
-  async getCurrencyInput() {
-    return this.currencyInput.getAttribute('value');
   }
 
   async setPhotoInput(photo) {

@@ -21,7 +21,6 @@
       "mileage": "Mileage",
       "year": "Year",
       "price": "Price",
-      "currency": "Currency",
       "photo": "Photo",
       "user": "User"
     }

@@ -7,7 +7,6 @@ export interface ICar {
   mileage?: number;
   year?: number;
   price?: number;
-  currency?: string;
   photoContentType?: string;
   photo?: any;
   user?: IUser;

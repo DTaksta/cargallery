@@ -57,8 +57,6 @@ describe('Car e2e test', () => {
       expect(await carUpdatePage.getYearInput()).to.eq('5');
       await carUpdatePage.setPriceInput('5');
       expect(await carUpdatePage.getPriceInput()).to.eq('5');
-      await carUpdatePage.setCurrencyInput('currency');
-      expect(await carUpdatePage.getCurrencyInput()).to.match(/currency/);
       await carUpdatePage.setPhotoInput(absolutePath);
       await carUpdatePage.userSelectLastOption();
       await waitUntilDisplayed(carUpdatePage.getSaveButton());

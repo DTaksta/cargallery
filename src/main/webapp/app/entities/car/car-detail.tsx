@@ -161,12 +161,6 @@ export class CarDetail extends React.Component<ICarDetailProps> {
                 }
             </div>
             <dt>
-              <span id="currency">
-                <Translate contentKey="carsApp.car.currency">Currency</Translate>
-              </span>
-            </dt>
-            <dd>{carEntity.currency}</dd>
-            <dt>
               <span id="photo">
                 <Translate contentKey="carsApp.car.photo">Photo</Translate>
               </span>

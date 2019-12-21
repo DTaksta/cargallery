@@ -37,13 +37,6 @@
             ]
         },
         {
-            "fieldName": "currency",
-            "fieldType": "String",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
             "fieldName": "photo",
             "fieldType": "byte[]",
             "fieldTypeBlobContent": "image",

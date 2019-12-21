@@ -35,8 +35,8 @@
     "embeddableLaunchScript": false,
     "entitySuffix": "",
     "dtoSuffix": "DTO",
-    "otherModules": [],
-    "blueprints": []
+    "blueprints": [],
+    "otherModules": []
   },
   "entities": ["Car"]
 }

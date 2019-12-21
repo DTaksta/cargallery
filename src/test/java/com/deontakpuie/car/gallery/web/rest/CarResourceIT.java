@@ -49,9 +49,6 @@ public class CarResourceIT {
     private static final Float DEFAULT_PRICE = 1F;
     private static final Float UPDATED_PRICE = 2F;
 
-    private static final String DEFAULT_CURRENCY = "AAAAAAAAAA";
-    private static final String UPDATED_CURRENCY = "BBBBBBBBBB";
-
     private static final byte[] DEFAULT_PHOTO = TestUtil.createByteArray(1, "0");
     private static final byte[] UPDATED_PHOTO = TestUtil.createByteArray(1, "1");
     private static final String DEFAULT_PHOTO_CONTENT_TYPE = "image/jpg";
@@ -104,7 +101,6 @@ public class CarResourceIT {
             .mileage(DEFAULT_MILEAGE)
             .year(DEFAULT_YEAR)
             .price(DEFAULT_PRICE)
-            .currency(DEFAULT_CURRENCY)
             .photo(DEFAULT_PHOTO)
             .photoContentType(DEFAULT_PHOTO_CONTENT_TYPE);
         return car;
@@ -122,7 +118,6 @@ public class CarResourceIT {
             .mileage(UPDATED_MILEAGE)
             .year(UPDATED_YEAR)
             .price(UPDATED_PRICE)
-            .currency(UPDATED_CURRENCY)
             .photo(UPDATED_PHOTO)
             .photoContentType(UPDATED_PHOTO_CONTENT_TYPE);
         return car;
@@ -153,7 +148,6 @@ public class CarResourceIT {
         assertThat(testCar.getMileage()).isEqualTo(DEFAULT_MILEAGE);
         assertThat(testCar.getYear()).isEqualTo(DEFAULT_YEAR);
         assertThat(testCar.getPrice()).isEqualTo(DEFAULT_PRICE);
-        assertThat(testCar.getCurrency()).isEqualTo(DEFAULT_CURRENCY);
         assertThat(testCar.getPhoto()).isEqualTo(DEFAULT_PHOTO);
         assertThat(testCar.getPhotoContentType()).isEqualTo(DEFAULT_PHOTO_CONTENT_TYPE);
     }
@@ -270,24 +264,6 @@ public class CarResourceIT {
 
     @Test
     @Transactional
-    public void checkCurrencyIsRequired() throws Exception {
-        int databaseSizeBeforeTest = carRepository.findAll().size();
-        // set the field null
-        car.setCurrency(null);
-
-        // Create the Car, which fails.
-
-        restCarMockMvc.perform(post("/api/cars")
-            .contentType(TestUtil.APPLICATION_JSON_UTF8)
-            .content(TestUtil.convertObjectToJsonBytes(car)))
-            .andExpect(status().isBadRequest());
-
-        List<Car> carList = carRepository.findAll();
-        assertThat(carList).hasSize(databaseSizeBeforeTest);
-    }
-
-    @Test
-    @Transactional
     public void getAllCars() throws Exception {
         // Initialize the database
         carRepository.saveAndFlush(car);
@@ -302,7 +278,6 @@ public class CarResourceIT {
             .andExpect(jsonPath("$.[*].mileage").value(hasItem(DEFAULT_MILEAGE)))
             .andExpect(jsonPath("$.[*].year").value(hasItem(DEFAULT_YEAR)))
             .andExpect(jsonPath("$.[*].price").value(hasItem(DEFAULT_PRICE.doubleValue())))
-            .andExpect(jsonPath("$.[*].currency").value(hasItem(DEFAULT_CURRENCY)))
             .andExpect(jsonPath("$.[*].photoContentType").value(hasItem(DEFAULT_PHOTO_CONTENT_TYPE)))
             .andExpect(jsonPath("$.[*].photo").value(hasItem(Base64Utils.encodeToString(DEFAULT_PHOTO))));
     }
@@ -323,7 +298,6 @@ public class CarResourceIT {
             .andExpect(jsonPath("$.mileage").value(DEFAULT_MILEAGE))
             .andExpect(jsonPath("$.year").value(DEFAULT_YEAR))
             .andExpect(jsonPath("$.price").value(DEFAULT_PRICE.doubleValue()))
-            .andExpect(jsonPath("$.currency").value(DEFAULT_CURRENCY))
             .andExpect(jsonPath("$.photoContentType").value(DEFAULT_PHOTO_CONTENT_TYPE))
             .andExpect(jsonPath("$.photo").value(Base64Utils.encodeToString(DEFAULT_PHOTO)));
     }
@@ -354,7 +328,6 @@ public class CarResourceIT {
             .mileage(UPDATED_MILEAGE)
             .year(UPDATED_YEAR)
             .price(UPDATED_PRICE)
-            .currency(UPDATED_CURRENCY)
             .photo(UPDATED_PHOTO)
             .photoContentType(UPDATED_PHOTO_CONTENT_TYPE);
 
@@ -372,7 +345,6 @@ public class CarResourceIT {
         assertThat(testCar.getMileage()).isEqualTo(UPDATED_MILEAGE);
         assertThat(testCar.getYear()).isEqualTo(UPDATED_YEAR);
         assertThat(testCar.getPrice()).isEqualTo(UPDATED_PRICE);
-        assertThat(testCar.getCurrency()).isEqualTo(UPDATED_CURRENCY);
         assertThat(testCar.getPhoto()).isEqualTo(UPDATED_PHOTO);
         assertThat(testCar.getPhotoContentType()).isEqualTo(UPDATED_PHOTO_CONTENT_TYPE);
     }

@@ -42,10 +42,6 @@ public class Car implements Serializable {
     @Column(name = "price", nullable = false)
     private Float price;
 
-    @NotNull
-    @Column(name = "currency", nullable = false)
-    private String currency;
-
     
     @Lob
     @Column(name = "photo", nullable = false)
@@ -132,19 +128,6 @@ public class Car implements Serializable {
         this.price = price;
     }
 
-    public String getCurrency() {
-        return currency;
-    }
-
-    public Car currency(String currency) {
-        this.currency = currency;
-        return this;
-    }
-
-    public void setCurrency(String currency) {
-        this.currency = currency;
-    }
-
     public byte[] getPhoto() {
         return photo;
     }
@@ -210,7 +193,6 @@ public class Car implements Serializable {
             ", mileage=" + getMileage() +
             ", year=" + getYear() +
             ", price=" + getPrice() +
-            ", currency='" + getCurrency() + "'" +
             ", photo='" + getPhoto() + "'" +
             ", photoContentType='" + getPhotoContentType() + "'" +
             "}";
