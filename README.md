@@ -15,7 +15,7 @@ Maven 3.6.3
 
 Windows 10 X64
 
-Apache
+Tomcat Server
 
 MySQL 5.7
 
@@ -62,6 +62,7 @@ Unit tests are run by [Jest][] and written with [Jasmine][]. They're located in 
 
 1 First thing, before client and server are loaded, mvnw and npm start are run.
 
+
 2 Then we see both the TypeScript Client and the Java Server loaded, we can now access the app on localhost:9060
 
 3 We Know see the Java Car Gallery Landing Page
@@ -76,17 +77,18 @@ Unit tests are run by [Jest][] and written with [Jasmine][]. They're located in 
 
 8 We try and create a Kia Rio model but forget to fill in year and are reminded for it
 
-8 We then try and put in a string for mileage and are told it can only be a number
-
 9 We then submit the form without errors
 
 10 We see our new car created
 
 11 We try and view that car, and also notice that we can change the currency of price, which we do in ZA
 
-12 We then add a Ferrari, Porsche, and Aston Martin.
+12 We then try and edit Kia and put in a string for mileage and are told it can only be a number
 
+13 We then change the year and see our result reflect successfully 
 
-13 We then delete the Aston Martin.
+14 We then add a Ferrari, Porsche, and Aston Martin.
+
+15 We then delete the Aston Martin.
 
 
