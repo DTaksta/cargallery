@@ -46,7 +46,7 @@ auto-refreshes when files change on your hard drive.
 
 ## Testing
 
-To launch your application's tests, run: (these server side tests are located cargallery/src/test/java/com/deontakpuie/car/gallery and test for the Car Entity Class https://github.com/DTaksta/cargallery/blob/master/src/test/java/com/deontakpuie/car/gallery/domain/CarTest.java)
+To launch your application's tests, run: (these server side tests are located cargallery/src/test/java/com/deontakpuie/car/gallery and test for the Car Entity Class https://github.com/DTaksta/cargallery/blob/master/src/test/java/com/deontakpuie/car/gallery/domain/CarTest.java and Car Restful Service https://github.com/DTaksta/cargallery/blob/master/src/test/java/com/deontakpuie/car/gallery/web/rest/CarResourceIT.java)
 
     ./mvnw verify
 
