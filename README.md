@@ -61,13 +61,16 @@ Unit tests are run by [Jest][] and written with [Jasmine][]. They're located in 
 # Walkthrough
 
 1 First thing, before client and server are loaded, mvnw and npm start are run.
-
+![Pre Servers Running] https://github.com/DTaksta/cargallery/blob/master/webpack/beforeServerAndClientStart.JPG
 
 2 Then we see both the TypeScript Client and the Java Server loaded, we can now access the app on localhost:9060
+![Both Server Running] https://github.com/DTaksta/cargallery/blob/master/webpack/clientAndServerLoadedFull.png
 
 3 We Know see the Java Car Gallery Landing Page
+![Landing Page] https://github.com/DTaksta/cargallery/blob/master/webpack/javaCarGalleryLandingPage.JPG
 
 4 We try and sign in using the User User combination 
+![SignIn Form] https://github.com/DTaksta/cargallery/blob/master/webpack/signInFormWithDefaultUserUser.JPG
 
 5 We then are signed in and arrive at the landing of the app
 
@@ -81,7 +84,9 @@ Unit tests are run by [Jest][] and written with [Jasmine][]. They're located in 
 
 10 We see our new car created
 
-11 We try and view that car, and also notice that we can change the currency of price, which we do in ZA
+11 We try and view that car, and also notice that we can change the currency of price, which we do in ZA,
+this code can be found https://github.com/DTaksta/cargallery/blob/master/src/main/webapp/app/entities/car/car-detail.tsx which uses exchangerates.io for the rates.
+
 
 12 We then try and edit Kia and put in a string for mileage and are told it can only be a number
 
