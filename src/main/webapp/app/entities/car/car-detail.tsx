@@ -15,24 +15,28 @@ class Converter extends Component {
     // Initializes the currencies with values from the api
     componentDidMount() {
         axios
-            .get("https://cors-anywhere.herokuapp.com/http://api.openrates.io/latest")
+            .get("https://cors-anywhere.herokuapp.com/https://api.exchangeratesapi.io/latest")
             .then(response => {
-                // Initialized with 'EUR' because the base currency is 'EUR'
+                // Initialized with 'USD' because the base currency is 'USD'
                 // and it is not included in the response
-                const currencyAr = ["EUR"]
+                const currencyAr = ["USD"]
                                     /* eslint-disable no-console */
                                     console.log(response.data.rates);
+                                    console.log(Object.keys(response.data.rates).length);
                                     /* eslint-enable no-console */
-                for (let i=0; i < response.data.rates.length; i++) {
+                Object.keys(response.data.rates).forEach(key=>{
                     /* eslint-disable no-console */
                     console.log("counting");
                     /* eslint-enable no-console */
-                    currencyAr.push(response.data.rates[i])
+                    currencyAr.push(key)
                     /* eslint-disable no-console */
-                    console.log(response.data.rates[i]);
+                    console.log(key);
                     /* eslint-enable no-console */
-                }
+                });
                 this.setState({ currencies: currencyAr.sort() })
+                /* eslint-disable no-console */
+                console.log(this.state.currencies)
+                /* eslint-enable no-console */
             })
             .catch(err => {
                 /* eslint-disable no-console */
@@ -45,7 +49,7 @@ class Converter extends Component {
     convertHandler = () => {
         if (this.state.fromCurrency !== this.state.toCurrency) {
             axios
-                .get(`https://cors-anywhere.herokuapp.com/http://api.openrates.io/latest?base=${this.state.fromCurrency}&symbols=${this.state.toCurrency}`)
+                .get(`https://cors-anywhere.herokuapp.com/https://api.exchangeratesapi.io/latest?base=${this.state.fromCurrency}&symbols=${this.state.toCurrency}`)
                 .then(response => {
                     const result = this.state.amount * (response.data.rates[this.state.toCurrency]);
                     this.setState({ result: result.toFixed(5) })
