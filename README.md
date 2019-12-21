@@ -81,27 +81,38 @@ Unit tests are run by [Jest][] and written with [Jasmine][]. They're located in 
 ![Signed In Successfully](https://github.com/DTaksta/cargallery/blob/master/webpack/SignedInSelectCarsEntity.JPG)
 
 6 We then choose to access the Cars grid from the Entities dropdown and are then presented with a Car Grid Filled with Dummy Data supplied by Faker.IO which seeds data that more or less does not violate field types but does is not real car data so we will add our own real data next.
+
 ![Car Grid With Dummy Data](https://github.com/DTaksta/cargallery/blob/master/webpack/sampleCarGridWithDummyDaterByFakerIO.JPG)
 
 7 We then create a new car and taken to new car page
+
 ![Create New Car](https://github.com/DTaksta/cargallery/blob/master/webpack/createNewCarPage.JPG)
 
 8 We try and create a Kia Rio model but forget to fill in year and are reminded for it
+
 ![KIA RIO Missing Year](https://github.com/DTaksta/cargallery/blob/master/webpack/createNewCarPage-ValidationMissingYear.JPG)
 9 We then fill in the correct information and submit
+
 ![KIA RIO New Car Correct Info](https://github.com/DTaksta/cargallery/blob/master/webpack/newCarComplete.JPG)
 
 10 We try and view that car, and also notice that we can change the currency of price, which we do in ZA,
 this code can be found https://github.com/DTaksta/cargallery/blob/master/src/main/webapp/app/entities/car/car-detail.tsx which uses exchangerates.io for the rates.
+
 ![KIA RIO View](https://github.com/DTaksta/cargallery/blob/master/webpack/KiaRioViewInRands.JPG)
 
 11 We then try and edit Kia and put in a string for mileage and are told it can only be a number
 
+![KIA Mileage Should Be A Number](https://github.com/DTaksta/cargallery/blob/master/webpack/KiaEditMileageValidation.JPG)
 
-12 We then change the year and see our result reflect successfully 
+12 We then change the year, leaving mileage as a number and see our result reflect successfully 
 
-13 We then add a Ferrari, Porsche, and Aston Martin.
+![Kia Edited Succesfully](https://github.com/DTaksta/cargallery/blob/master/webpack/KiaRioEditReflecting.JPG)
 
-14 We then delete the Aston Martin.
+13 As Can be seen above we also added a Ferrari, Porsche, and Aston Martin, but with all that elegance let us delete one, the Aston Martin.
+
+![Before Aston Delete](https://github.com/DTaksta/cargallery/blob/master/webpack/KiaRioEditReflecting.JPG)
+
+and after the delete, we see it is no longer there
+![]
 
 
