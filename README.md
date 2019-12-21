@@ -13,7 +13,9 @@ JDK 11
 Maven 3.6.3
 
 Windows 10 X64
+
 Apache
+
 MySQL 5.7
 
 ### Setup
