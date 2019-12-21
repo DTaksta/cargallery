@@ -2,6 +2,7 @@
 
 This is a Fullstack Java ReactJS Application built on JHispter Stack
 with JUnit and JEST Unit Testing and Swagger API Documentation.
+Build Instructions will be followed by Screenshots and Walkthrough.
 
 ## Prerequisites
 PC
@@ -55,4 +56,21 @@ To launch your application's tests, run: (these server side tests are located ca
 Unit tests are run by [Jest][] and written with [Jasmine][]. They're located in [src/test/javascript/](src/test/javascript/) and can be run with:
 
     npm test
+    
+    
+# Walkthrough
+
+1 First thing, before client and server are loaded, mvnw and npm start are run.
+
+2 Then we see both the TypeScript Client and the Java Server loaded, we can now access the app on localhost:9060
+
+3 We Know see the Java Car Gallery Landing Page
+
+4 We try and sign in using the User User combination 
+
+5 We then are signed in and arrive at the landing of the app
+
+6 We then choose to access the Cars grid from the Entities dropdown
+
+
 
