@@ -175,19 +175,6 @@ export class CarUpdate extends React.Component<ICarUpdateProps, ICarUpdateState>
                   />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="currencyLabel" for="car-currency">
-                    <Translate contentKey="carsApp.car.currency">Currency</Translate>
-                  </Label>
-                  <AvField
-                    id="car-currency"
-                    type="text"
-                    name="currency"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
                   <AvGroup>
                     <Label id="photoLabel" for="photo">
                       <Translate contentKey="carsApp.car.photo">Photo</Translate>
