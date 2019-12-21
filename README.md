@@ -72,5 +72,21 @@ Unit tests are run by [Jest][] and written with [Jasmine][]. They're located in 
 
 6 We then choose to access the Cars grid from the Entities dropdown
 
+7 We then create a new car and taken to new car page
+
+8 We try and create a Kia Rio model but forget to fill in year and are reminded for it
+
+8 We then try and put in a string for mileage and are told it can only be a number
+
+9 We then submit the form without errors
+
+10 We see our new car created
+
+11 We try and view that car, and also notice that we can change the currency of price, which we do in ZA
+
+12 We then add a Ferrari, Porsche, and Aston Martin.
+
+
+13 We then delete the Aston Martin.
 
 
