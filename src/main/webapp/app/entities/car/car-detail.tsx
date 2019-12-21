@@ -19,7 +19,7 @@ class Converter extends Component {
             .then(response => {
                 // Initialized with 'USD' because the base currency is 'USD'
                 // and it is not included in the response
-                const currencyAr = ["USD"]
+                const currencyAr = []
                                     /* eslint-disable no-console */
                                     console.log(response.data.rates);
                                     console.log(Object.keys(response.data.rates).length);
